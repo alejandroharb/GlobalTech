@@ -42,8 +42,8 @@ app.get('/', (req, res) => {
   res.send("Hello world");
 })
 app.post('/upload', uploading.single('image'), function(req, res) {
-  console.log(req);
-  res.send(req);
+  console.log(req.file);
+  res.send(req.file);
 })
 
 // const routes = require('./routes');
